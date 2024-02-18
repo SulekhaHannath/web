@@ -1,32 +1,150 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>How to make a website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5551b7c8dc.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="banner">
-        <div class="navbar">
-            <img src="logo.png" class="logo">
-            <ul>
-               <li><a href="#">Home</a></li>
-               <li><a href="#">Bedroom</a></li>
-               <li><a href="#">Dining</a></li>
-               <li><a href="#">Kitchen</a></li>
-               <li><a href="#">Backyard</a></li>
-            </ul>
-        </div>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
 
-        <div class="content">
-           <h1>STYLE YOUR SPACE</h1>
-           <p>Welcome to HELLO HOME, where the style meets.<br>Explore our curated 
-            collection of exquisite home decor items to transform your living spaces
-            into personalized havens of beauty and functionality</p>
-            <div>
-                <button type="button"><span></span>ABOUT US</button>
-                <button type="button"><span></span>TERMS AND CONDITIONS</button>
-
+            </nav>
+        <div class="header-text">
+        <p>UI/UX Designer</p>
+        <h1>Hi,I'm<span> Sulekha</span><br>Hannath.M.A from Kerala</h1>
+    </div>
+    </div>
+</div>
+<!----------------about------------------>
+<div id="about">
+    <div id="contair">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="pic(1).png">
             </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>As website designers, our mission is to fuse innovation with functionality, 
+                   crafting visually stunning and intuitively navigable online experiences.  
+                   With a keen eye for aesthetics and a deep understanding of user experience principles, 
+                   we meticulously conceptualize and execute designs that resonate with our clients' 
+                   brand identities and target audiences. By leveraging the latest design tools and techniques,
+                   we strive to create websites that not only capture attention but also inspire action, 
+                   whether it be making a purchase, subscribing to a service, or engaging with content. 
+                   Our commitment to staying at the forefront of design trends ensures that each project 
+                   we undertake is infused with freshness and originality, ultimately empowering our clients to stand out 
+                   in the digital landscape.</p>
+                   <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                   </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UL</span><br>Designing Web interfaces</li>
+                        <li><span>Web Development</span><br>Designing Web App Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023</span><br>Intership at FACEIN Technologies PVT LTD </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022</span><br> Btech Student</li>
+                        <li><span>2020</span><br>Plus Two - CS</li>
+                    </ul>
+                </div>
+            </div>
+           
         </div>
     </div>
+</div>
+<!----------------services------------------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Our web design services offer tailored solutions to bring your online vision to life.
+                   We specialize in creating visually appealing, user-friendly websites that effectively 
+                   communicate your brand message and drive engagement.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UL Design</h2>
+                <p>Our web design services offer tailored solutions to bring your online vision to life.
+                   We specialize in creating visually appealing, user-friendly websites that effectively 
+                   communicate your brand message and drive engagement.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div> 
+</div>
+<!---------------------portfolio------------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="pic(2).jpg">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>The app connects you to the talented people around the world.
+                       Download it from play store</p>
+                       <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="pic(3).jpg">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>The app connects you to the talented people around the world.
+                       Download it from play store</p>
+                       <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!---------------------------contact------------------------------>
+<div id="content">
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 </body>
 </html>
