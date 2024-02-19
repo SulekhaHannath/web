@@ -12,13 +12,15 @@
         <div class="container">
             <nav>
                 <img src="logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
-
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
         <div class="header-text">
         <p>UI/UX Designer</p>
@@ -127,8 +129,31 @@
 <div id="content">
     <div class="container">
         <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>Contact@example.com</p>
+                <p><i class="fa-solid fa-phone"></i>6543876410</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="your Name" required>
+                    <input type="email" name="email" placeholder="your Email" required>
+                    <textarea name="Message" rows="6" placeholder="your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
 
         </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright Sulekha. Made with <i class="fa-solid fa-heart"></i> Easy works</p>
     </div>
 </div>
 
@@ -144,6 +169,16 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
     }
 </script>
 </body>
